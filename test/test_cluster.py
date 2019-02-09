@@ -27,6 +27,7 @@ def test_partition_clustering():
         active_sites.append(io.read_active_site(filepath))
 
     # update this assertion
+    # checking the the three sites cluster as expected
     assert np.array_equal(cluster.cluster_by_partitioning(active_sites, 2)[0], [1, 1, 0])
 
 
@@ -40,4 +41,5 @@ def test_hierarchical_clustering():
         active_sites.append(io.read_active_site(filepath))
 
     # update this assertion
+    # checking the the three sites cluster as expected
     assert np.array_equal(cluster.cluster_hierarchically(active_sites, 2)[0], [0, 0, 1])
